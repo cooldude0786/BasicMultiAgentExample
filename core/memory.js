@@ -16,4 +16,4 @@ class Memory {
   }
 }
 
-module.exports = { Memory };
+export { Memory };

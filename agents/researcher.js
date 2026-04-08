@@ -1,4 +1,4 @@
-const { BaseAgent } = require("./coreAggent.js");
+import { BaseAgent } from "./coreAggent.js";
 
 class ResearcherAgent extends BaseAgent {
     constructor() {
@@ -23,4 +23,4 @@ Do NOT conclude anything.
     }
 }
 
-module.exports = { ResearcherAgent };
+export { ResearcherAgent };

@@ -1,4 +1,4 @@
-const { callGemini } = require("../core/llm.js");
+import { callGemini } from "../core/llm.js";
 
 class BaseAgent {
     constructor(name, systemPrompt) {
@@ -29,4 +29,4 @@ ${input}
     }
 }
 
-module.exports = { BaseAgent };
+export { BaseAgent };

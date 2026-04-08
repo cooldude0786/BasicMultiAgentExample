@@ -56,12 +56,12 @@
 // }
 
 
-const { Memory } = require("./memory.js");
-const { ControllerAgent } = require("../agents/controller.js");
-const { ResearcherAgent } = require("../agents/researcher.js");
-const { AnalystAgent } = require("../agents/analyst.js");
-const { ReviewerAgent } = require("../agents/reviewer.js");
-const { tools } = require("./tools.js");
+import { Memory } from "./memory.js";
+import { ControllerAgent } from "../agents/controller.js";
+import { ResearcherAgent } from "../agents/researcher.js";
+import { AnalystAgent } from "../agents/analyst.js";
+import { ReviewerAgent } from "../agents/reviewer.js";
+import { tools } from "./tools.js";
 
 /**
  * Clean + Parse LLM Output
@@ -191,4 +191,4 @@ class Orchestrator {
     }
 }
 
-module.exports = { Orchestrator };
+export { Orchestrator };

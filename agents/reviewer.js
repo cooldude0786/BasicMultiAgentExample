@@ -1,4 +1,4 @@
-const { BaseAgent } = require("./coreAggent.js");
+import { BaseAgent } from "./coreAggent.js";
 
 class ReviewerAgent extends BaseAgent {
     constructor() {
@@ -19,4 +19,4 @@ You must:
     }
 }
 
-module.exports = { ReviewerAgent };
+export { ReviewerAgent };

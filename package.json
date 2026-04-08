@@ -16,6 +16,7 @@
   "description": "",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.82.0",
+    "@google-cloud/vertexai": "^1.11.0",
     "@google/generative-ai": "^0.24.1",
     "@next-auth/prisma-adapter": "^1.0.7",
     "@prisma/adapter-pg": "^7.6.0",
