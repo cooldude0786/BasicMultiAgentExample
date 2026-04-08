@@ -1,4 +1,4 @@
-const { callClaude } = require("../core/llm.js");
+const { callGemini } = require("../core/llm.js");
 
 class BaseAgent {
     constructor(name, systemPrompt) {
@@ -15,7 +15,7 @@ class BaseAgent {
         console.log(`🧠 Memory: ${context}`);
         console.log(`============================\n`);
 
-        const response = await callClaude(this.systemPrompt, `
+        const response = await callGemini(this.systemPrompt, `
 Context:
 ${context}
 

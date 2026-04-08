@@ -1,28 +1,15 @@
 
-const Anthropic = require("@anthropic-ai/sdk").default;
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 const dotenv = require("dotenv");
 
 dotenv.config();
 
-const client = new Anthropic({
-    apiKey: process.env.CLAUDE_API_KEY,
-});
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-async function callClaude(system, user) {
-    const response = await client.messages.create({
-        model: "claude-opus-4-20250514", // 💰 cheapest
-        max_tokens: 800,
-        temperature: 0.7,
-        system,
-        messages: [
-            {
-                role: "user",
-                content: user,
-            },
-        ],
-    });
-
-    return response.content[0].text;
+async function callGemini(system, user) {
+    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
+    const result = await model.generateContent([system, user]);
+    return result.response.text();
 }
 
-module.exports = { callClaude };
+module.exports = { callGemini };
